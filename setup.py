@@ -8,7 +8,7 @@ except ImportError:
 	from distutils.core import setup
 
 VERSION = eval(filter(lambda _:_.startswith("VERSION"),
-	file("src/fake/__init__.py").readlines())[0].split("=")[1])
+	open("src/fake/__init__.py").readlines())[0].split("=")[1])
 
 setup(
 	name             = "fake-data",
